@@ -11,6 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal shiftwidth=4 tabstop=4 softtabstop=4"
 })
 
+vim.keymap.set("v", "<leader>p", "\"_dP")
 vim.keymap.set(
   "n", "<leader>nd", [[<cmd>lua vim.diagnostic.goto_next()<CR>]])
 vim.keymap.set(
@@ -41,7 +42,8 @@ vim.opt.formatoptions:append("r")
 vim.opt.formatoptions:append("n")
 vim.opt.formatoptions:append("t")
 vim.opt.swapfile = false
-vim.opt.spelllang = { "en", "uk" }
+vim.opt.spelllang = { "en_US", "uk" }
+vim.opt.spell = true
 vim.opt.undofile = true
 vim.opt.mousemodel = "extend"
 
