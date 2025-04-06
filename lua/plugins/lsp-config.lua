@@ -17,6 +17,7 @@ return {
           "dockerls",
           "jdtls",
           "sqls",
+          "jsonls",
         }
       })
     end
@@ -47,7 +48,30 @@ return {
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.sqls.setup({ capabilities = capabilities })
       lspconfig.dockerls.setup({ capabilities = capabilities })
-      lspconfig.jdtls.setup({ capabilities = capabilities })
+      lspconfig.jsonls.setup({ capabilities = capabilities })
+
+      local jdtls = lspconfig.jdtls
+      local home = os.getenv("HOME")
+      local workspace_path = home .. "/code/workspace/"
+      local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+      local workspace_dir = workspace_path .. project_name
+
+      jdtls.setup({
+        cmd = {
+          "java",
+          "-javaagent:" .. home .. "/.local/share/lombok/lombok.jar",
+          "-Xmx2G",
+          "-XX:+UseG1GC",
+          "-XX:+UseStringDeduplication",
+          "-jar", vim.fn.glob(home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
+          "-configuration", home .. "/.local/share/nvim/mason/packages/jdtls/config_linux",
+          "-data", workspace_dir,
+        },
+        capabilities = capabilities,
+        on_init = function(client)
+          client.server_capabilities.semanticTokensProvider = nil
+        end,
+      })
 
       vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, {})

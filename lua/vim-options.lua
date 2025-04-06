@@ -46,4 +46,3 @@ vim.opt.spelllang = { "en_US", "uk" }
 vim.opt.spell = true
 vim.opt.undofile = true
 vim.opt.mousemodel = "extend"
-

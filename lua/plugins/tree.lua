@@ -20,6 +20,7 @@ return {
         audo_expand_width = true,
         position = "left",
         width = 35,
+        view = { adaptive_size = true }
       }
     }
     vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
