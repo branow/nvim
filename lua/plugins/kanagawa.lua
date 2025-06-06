@@ -7,6 +7,11 @@ return {
     require("kanagawa").setup({
       keywordStyle = { italic = false },
       transparent = false,
+      undercurl = true,
+      commentStyle = { italic = true },
+      functionStyle = { italic = true },
+      statementStyle = { bold = true },
+      terminalColors = true,
       theme = "wave", -- vim.o.background = ""
       background = {
         dark = "wave", -- vim.o.background = "dark"

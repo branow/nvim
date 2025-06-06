@@ -25,6 +25,7 @@ return {
         "markdown_inline",
         "gitignore",
         "json",
+        "xml",
       },
       highlight = { enable = true },
       autotag = {
