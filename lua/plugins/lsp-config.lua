@@ -14,6 +14,7 @@ return {
           "lua_ls",
           "vtsls",
           "cssls",
+          "clangd",
           "gopls",
           "dockerls",
           "jdtls",
@@ -82,6 +83,7 @@ return {
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.vtsls.setup({ capabilities = capabilities })
       lspconfig.cssls.setup({ capabilities = capabilities })
+      lspconfig.clangd.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.sqls.setup({ capabilities = capabilities })
       lspconfig.dockerls.setup({ capabilities = capabilities })
