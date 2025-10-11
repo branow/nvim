@@ -24,6 +24,6 @@ return {
       end
     })
     vim.cmd.colorscheme("kanagawa")
-    vim.o.background = ""
+    vim.o.background = "dark"
   end
 }
