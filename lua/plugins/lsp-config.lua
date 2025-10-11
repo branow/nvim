@@ -69,6 +69,12 @@ return {
         jdtls.start_or_attach(config)
       end
 
+      vim.filetype.add({
+        extension = {
+          drl = "java",
+        },
+      })
+
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "java",
         callback = setup_jdtls,

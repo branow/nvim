@@ -6,10 +6,10 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set clipboard+=unnamedplus")
 vim.g.mapleader = " "
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "java",
-  command = "setlocal shiftwidth=4 tabstop=4 softtabstop=4"
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "java",
+--   command = "setlocal shiftwidth=4 tabstop=4 softtabstop=4"
+-- })
 
 vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
 vim.keymap.set("v", "<leader>p", "\"_dP")
@@ -52,7 +52,8 @@ vim.opt.colorcolumn = { 81, 101 }
 vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars = {
-   tab      = "⇥-",
+   -- tab      = "⇥-",
+   tab      = "··",
    lead     = "·",
    trail    = "·",
    nbsp     = "⇥",
@@ -70,3 +71,9 @@ vim.opt.spelllang = { "en_US", "uk" }
 vim.opt.spell = true
 vim.opt.undofile = true
 vim.opt.mousemodel = "extend"
+
+vim.filetype.add({
+  extension = {
+    dwl = "c",  -- use Tree-sitter C parser for .dwl files
+  },
+})
