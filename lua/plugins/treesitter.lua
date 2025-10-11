@@ -26,6 +26,7 @@ return {
         "gitignore",
         "json",
         "xml",
+        "php",
       },
       highlight = { enable = true },
       autotag = {

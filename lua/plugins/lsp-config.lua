@@ -21,6 +21,7 @@ return {
           "sqls",
           "jsonls",
           "pylsp",
+          "intelephense",
         }
       })
     end
@@ -96,6 +97,7 @@ return {
       lspconfig.dockerls.setup({ capabilities = capabilities })
       lspconfig.jsonls.setup({ capabilities = capabilities })
       lspconfig.pylsp.setup({ capabilities = capabilities })
+      lspconfig.intelephense.setup({ capabilities = capabilities })
 
       vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, {})
