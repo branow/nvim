@@ -20,6 +20,7 @@ return {
           "jdtls",
           "sqls",
           "jsonls",
+          "pylsp",
         }
       })
     end
@@ -88,6 +89,7 @@ return {
       lspconfig.sqls.setup({ capabilities = capabilities })
       lspconfig.dockerls.setup({ capabilities = capabilities })
       lspconfig.jsonls.setup({ capabilities = capabilities })
+      lspconfig.pylsp.setup({ capabilities = capabilities })
 
       vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, {})
