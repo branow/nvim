@@ -18,6 +18,7 @@ return {
           "gopls",
           "dockerls",
           "jdtls",
+          "kotlin_language_server",
           "sqls",
           "jsonls",
           "pylsp",
@@ -98,6 +99,18 @@ return {
       lspconfig.jsonls.setup({ capabilities = capabilities })
       lspconfig.pylsp.setup({ capabilities = capabilities })
       lspconfig.intelephense.setup({ capabilities = capabilities })
+      lspconfig.kotlin_language_server.setup({
+        capabilities = capabilities,
+        cmd_env = {
+          KOTLIN_LANGUAGE_SERVER_OPTS = "-Xms512m -Xmx3g -XX:+UseG1GC -XX:+UseStringDeduplication",
+          MAVEN_OPTS = "-Xms512m -Xmx2g -XX:+UseG1GC",
+        },
+        root_dir = lspconfig.util.root_pattern(
+          "settings.gradle", "settings.gradle.kts",
+          "build.gradle", "build.gradle.kts",
+          "pom.xml", ".git"
+        ),
+      })
 
       vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, {})

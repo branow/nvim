@@ -16,6 +16,7 @@ return {
         "go",
         "python",
         "java",
+        "kotlin",
         "javascript",
         "typescript",
         "tsx",
