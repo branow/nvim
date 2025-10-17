@@ -21,7 +21,7 @@ return {
           "kotlin_language_server",
           "sqls",
           "jsonls",
-          "pylsp",
+          "pyright",
           "intelephense",
         }
       })
@@ -97,7 +97,7 @@ return {
       lspconfig.sqls.setup({ capabilities = capabilities })
       lspconfig.dockerls.setup({ capabilities = capabilities })
       lspconfig.jsonls.setup({ capabilities = capabilities })
-      lspconfig.pylsp.setup({ capabilities = capabilities })
+      lspconfig.pyright.setup({ capabilities = capabilities })
       lspconfig.intelephense.setup({ capabilities = capabilities })
       lspconfig.kotlin_language_server.setup({
         capabilities = capabilities,
