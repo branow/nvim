@@ -14,6 +14,7 @@ return {
         "vimdoc",
         "lua",
         "go",
+        "glsl",
         "python",
         "java",
         "kotlin",
