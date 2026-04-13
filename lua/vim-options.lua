@@ -1,4 +1,5 @@
 vim.cmd("set number")
+vim.cmd("set relativenumber")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -67,8 +68,9 @@ vim.opt.formatoptions:append("r")
 vim.opt.formatoptions:append("n")
 vim.opt.formatoptions:append("t")
 vim.opt.swapfile = false
-vim.opt.spelllang = { "en_US", "uk" }
 vim.opt.spell = true
+vim.opt.spelloptions = 'camel'
+vim.opt.spelllang = { "en_US", "uk" }
 vim.opt.undofile = true
 vim.opt.mousemodel = "extend"
 

@@ -4,6 +4,7 @@ return {
   priority = 1000,
   name = "kanagawa",
   config = function()
+
     require("kanagawa").setup({
       keywordStyle = { italic = false },
       transparent = false,
@@ -25,5 +26,13 @@ return {
     })
     vim.cmd.colorscheme("kanagawa")
     vim.o.background = "dark"
+    -- vim.o.background = "light"
+
+    vim.cmd [[
+      highlight SpellBad guisp=#b48383 gui=undercurl
+      highlight SpellCap guisp=#938d6c gui=undercurl
+      highlight SpellLocal guisp=#59674c gui=undercurl
+    ]]
   end
 }
+
