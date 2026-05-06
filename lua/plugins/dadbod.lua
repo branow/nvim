@@ -12,7 +12,7 @@ return {
     init = function()
       vim.g.db_ui_use_nerd_fonts = 1
       vim.g.db_ui_win_position = 'left'
-      vim.keymap.set('n', '<C-m>', '<cmd>DBUI<CR>')
+      vim.keymap.set('n', '<leader-c>', '<cmd>DBUI<CR>')
       vim.keymap.set('n', '<leader>q', '<Plug>(DBUI_ExecuteQuery)')
       vim.keymap.set('v', '<leader>q', '<Plug>(DBUI_ExecuteQuery)')
       vim.keymap.set('n', '<leader>df', '<cmd>DBUIFindBuffer<CR>')
