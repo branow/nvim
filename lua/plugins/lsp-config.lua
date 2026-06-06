@@ -23,6 +23,7 @@ return {
           "jsonls",
           "pyright",
           "intelephense",
+          "rust_analyzer",
         }
       })
     end
@@ -99,6 +100,7 @@ return {
       lspconfig.jsonls.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({ capabilities = capabilities })
       lspconfig.intelephense.setup({ capabilities = capabilities })
+      lspconfig.rust_analyzer.setup({ capabilities = capabilities })
       lspconfig.kotlin_language_server.setup({
         capabilities = capabilities,
         cmd_env = {

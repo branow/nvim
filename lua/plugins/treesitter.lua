@@ -29,6 +29,7 @@ return {
         "json",
         "xml",
         "php",
+        "rust",
       },
       highlight = { enable = true },
       autotag = {
