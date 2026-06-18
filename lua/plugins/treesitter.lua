@@ -30,8 +30,12 @@ return {
         "xml",
         "php",
         "rust",
+        "sql",
       },
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        disable = { "sql" },
+      },
       autotag = {
         enable = true
       },
