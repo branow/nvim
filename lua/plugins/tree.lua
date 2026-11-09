@@ -9,6 +9,15 @@ return {
   },
   config = function()
     require("neo-tree").setup {
+      enable_diagnostics = true,
+      default_component_configs = {
+        diagnostics = {
+          errors_only = false,
+          icons = {
+            hint = "●",
+          },
+        },
+      },
       filesystem = {
         filtered_items = {
           visible = true,
