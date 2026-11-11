@@ -24,7 +24,7 @@
   "render-markdown.nvim": { "branch": "main", "commit": "9c235bedc4f96145e63fcad5b78cd78bce8822c4" },
   "springboot-nvim": { "branch": "main", "commit": "105fb2a0b54fbd819200b244e8079c4c9f1a8415" },
   "sqlserver.vim": { "branch": "master", "commit": "6b120e2fe5eed7ee75922350b7892107b18db5ae" },
-  "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
+  "telescope.nvim": { "branch": "master", "commit": "1e1bab730218eaf97fce743be3f56e51075928ac" },
   "treesitter": { "branch": "main", "commit": "19bdfc04f40ed2ccb3340591d125f759b0406875" },
   "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
   "vim-dadbod": { "branch": "master", "commit": "6d1d41da4873a445c5605f2005ad2c68c99d8770" },
