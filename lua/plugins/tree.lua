@@ -29,7 +29,12 @@ return {
         audo_expand_width = true,
         position = "left",
         width = 35,
-        view = { adaptive_size = true }
+        view = { adaptive_size = true },
+        mappings = {
+          -- neo-tree maps <Tab> to "select"; unmap it so the global
+          -- double-Tab window-nav handler (lua/vim-options.lua) works here.
+          ["<Tab>"] = "none",
+        },
       }
     }
     vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
