@@ -7,7 +7,8 @@ return {
 
     require("kanagawa").setup({
       keywordStyle = { italic = false },
-      transparent = false,
+      transparent = true,
+      colors = { theme = { all = { ui = { bg_gutter = "none" } } } },
       undercurl = true,
       commentStyle = { italic = true },
       functionStyle = { italic = true },
