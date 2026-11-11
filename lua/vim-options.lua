@@ -70,7 +70,7 @@ vim.opt.formatoptions:append("t")
 vim.opt.swapfile = false
 vim.opt.spell = true
 vim.opt.spelloptions = 'camel'
-vim.opt.spelllang = { "en_US", "uk" }
+vim.opt.spelllang = { "en_us", "uk" }
 vim.opt.undofile = true
 vim.opt.mousemodel = "extend"
 
